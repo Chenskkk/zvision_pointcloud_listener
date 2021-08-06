@@ -42,7 +42,7 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "zvison_pointcloud_listener");
   ros::NodeHandle nh;
   ros::NodeHandle private_nh("~");
-  ros::Subscriber points_sub = nh.subscribe("points_raw", 100000, points_callback);
+  ros::Subscriber points_sub = nh.subscribe("zvision_lidar_points", 100000, points_callback);
 
   ros::spin();
   return 0;
